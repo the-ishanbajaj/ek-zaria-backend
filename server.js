@@ -2,6 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const multer = require('multer')
+const fs = require('fs')        
+const path = require('path')
 
 const app = express()
 
