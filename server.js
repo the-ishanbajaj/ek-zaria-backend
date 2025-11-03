@@ -5,6 +5,11 @@ const multer = require('multer')
 
 const app = express()
 
+const uploadDir = path.join(__dirname, 'uploads')
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true })
+  console.log('Uploads folder created')
+}
 // Middleware
 app.use(cors())
 app.use(express.json())
